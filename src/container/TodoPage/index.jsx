@@ -33,21 +33,11 @@ function TodoPage() {
   const [deleteItem, setDeleteItem] = useState(null);
 
   useEffect(() => {
-    setAddModal(new bootstrap.Modal(document.getElementById('addModal'), {
-      keyboard: false,
-    }))
-    setErrorModal(new bootstrap.Modal(document.getElementById('errorModal'), {
-      keyboard: false,
-    }))
-    setDateErrorModal(new bootstrap.Modal(document.getElementById('dateErrorModal'), {
-      keyboard: false,
-    }))
-    setUpdateModal(new bootstrap.Modal(document.getElementById('updateModal'), {
-      keyboard: false,
-    }))
-    setDeleteModal(new bootstrap.Modal(document.getElementById('deleteModal'), {
-      keyboard: false,
-    }))
+    setAddModal(new bootstrap.Modal(document.getElementById('addModal')))
+    setErrorModal(new bootstrap.Modal(document.getElementById('errorModal')))
+    setDateErrorModal(new bootstrap.Modal(document.getElementById('dateErrorModal')))
+    setUpdateModal(new bootstrap.Modal(document.getElementById('updateModal')))
+    setDeleteModal(new bootstrap.Modal(document.getElementById('deleteModal')))
   }, [])
 
   let dataArray = JSON.parse(localStorage.getItem("item")) ?? [];
